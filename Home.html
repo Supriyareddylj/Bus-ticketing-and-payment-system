@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Bus Ticketing</title>
+        <body>
+        <marquee style="font-size:25">
+            <b>
+                <i>Welcome to Bus ticketing</i>
+            </b>
+        </marquee>
+            <h1 style="font-size:35">Online Bus Ticketing and Payment System</h1>
+            <p style="font-size:23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Online Bus Ticket Reservation System is a web-based program that allows customers to check bus ticket availability, purchase bus tickets, and pay for bus tickets all in one place.  This method was created with busy customers in mind and makes traveling simple for them. This system is established for all the home users after gaining access from the administrator. Online Bus Ticket Reservation System provides a bus transportation system, a facility to reserve seats, cancellation of seats, and different types of enquiry that need an instant and quick reservation. This system can be used by the users in performing online reservation via the internet for their all-business purposes. Users can use this program directly on their websites and there is no need to install it.
+            <h3>Terms and conditions</h3>
+            <ul style="font-size:23"><li>
+                You possess the legal authority to create a binding legal obligation and enter into these Terms of use</li>
+               <li> You will use this Website in accordance with the Terms of use</li>
+                <li>You will use this Website to make only legitimate reservations for you or for another person for whom you are legally authorized to act</li>
+                <li>You will inform such other persons about the Terms of use that apply to the reservations you have made on their behalf, including all rules and restrictions applicable thereto </li>
+            </ul>
+            </p>
+            <input type="checkbox" id="check" onclick="enable()"><i>I have read and agreed to the Terms and conditions</i>
+            <button disabled="true" id="btn" class="button" onclick="document.location='Busticket.html'">Book Tickets here</button>
+            <script>
+                function enable(){
+                    var check = document.getElementById("check");
+                    var btn = document.getElementById("btn");
+                    if (check.checked) {
+                        btn.removeAttribute("disabled");
+                    }
+                    else{
+                        btn.disabled = "true";
+                    }
+                }
+            </script>
+            <style>
+                .button {border-radius: 8px;}
+                .button {font-size: 24px;}
+                .button {background-color:rgb(9, 139, 61)}
+                 .button:active {
+                    background-color: #3809e1;
+                 }
+                 body {
+                    background: -webkit-linear-gradient(to right, #509c71, #be48a6); 
+                    background: linear-gradient(to right, #3fc4c6, #290480); 
+                 }
+            </style>
+        </body>
+    </head>
+</html>

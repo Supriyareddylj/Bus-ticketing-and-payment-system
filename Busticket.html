@@ -1,0 +1,121 @@
+<html>
+    <body style="background: linear-gradient(135deg, #969798, #5ac9c0);">
+     <table> 
+    <th>Routes</th>
+    <th>Bus Name</th>
+            <th>Bus Number</th>
+            <th>Price</th>
+            <th>Available seats</th>
+            <th>Book Tickets</th>
+           </tr>
+           </thead>
+           <tbody>
+            <tr>
+              <td>Bangalore to Hyderabad</td>
+                <td>Srs travels</td>
+                <td>0456</td>
+                <td>1200</td>
+                <td>53</td>
+                <td><button onclick="window.location.href='Registerpage.html';" class="bookbtn">Book</button></td>
+            </tr>
+            <tr>
+              <td>Hyderabad to Bangalore</td>
+                <td>Sun travels</td>
+                <td>3452</td>
+                <td>1200</td>
+                <td>28</td>
+                <td><button onclick="window.location.href='Registerpage.html';" class="bookbtn">Book</button></td>
+            </tr>
+            <tr>
+              <td>Bangalore to Mysore</td>
+                <td>NVS travels</td>
+                <td>8352</td>
+                <td>500</td>
+                <td>36</td>
+                <td><button onclick="window.location.href='Registerpage.html';" class="bookbtn">Book</button></td>
+            </tr>
+            <tr>
+              <td>Mysore to Bangalore</td>
+              <td>SSDL travels</td>
+              <td>2946</td>
+              <td>500</td>
+              <td>40</td>
+              <td><button onclick="window.location.href='Registerpage.html';" class="bookbtn">Book</button></td>
+          </tr>
+          <tr>
+            <td>Chintamani to Tumkur</td>
+              <td>SVT travels</td>
+              <td>9103</td>
+              <td>800</td>
+              <td>35</td>
+              <td><button onclick="window.location.href='Registerpage.html';" class="bookbtn">Book</button></td>
+          </tr>
+          <tr>
+            <td>Tumkur to Chintamani</td>
+              <td>PVR travels</td>
+              <td>2313</td>
+              <td>800</td>
+              <td>25</td>
+              <td><button onclick="window.location.href='Registerpage.html';" class="bookbtn">Book</button></td>
+  </tr>
+</table>
+<style>
+  #myInput {
+  background-image: url('/css/searchicon.png'); 
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+</style>
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
+    </body>
+</html>
